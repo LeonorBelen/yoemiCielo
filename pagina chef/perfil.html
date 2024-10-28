@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Chef Thomas Keller</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FAF9F6;
+        }
+        .navbar {
+    background-color: #800000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.btn-iniciar-sesion {
+    background-color: #FFC107;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-links.active {
+    display: block;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    background-color: #800000;
+    padding: 10px 0;
+}
+
+.nav-links.active li {
+
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 700px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-left: -70px;
+    }
+}
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #800020;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .bio, .recommendations, .gallery, .contact {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .bio img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .bio h2 {
+            color: #333;
+        }
+        .recommendations h3, .gallery h3, .contact h3 {
+            color: #333;
+            margin-top: 0;
+        }
+        .gallery{
+           width: 1200px; 
+
+        }
+        .gallery img {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .recommendation {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .recommendation img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        footer {
+            background: #800020;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @media (min-width: 600px) {
+            .bio-content {
+                display: flex;
+                align-items: center;
+            }
+            .bio img {
+                flex: 1;
+                max-width: 200px;
+                margin-right: 20px;
+            }
+            .bio-text {
+                flex: 2;
+            }
+            .gallery img {
+                width: 30%;
+                margin: 1.66%;
+            }
+        }
+        @media (min-width: 768px) {
+            .container {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/imagenes/Captura_de_pantalla_2024-05-21_200104-removebg-preview (1).png" alt="Thomas Keller Gastronomía">
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                
+               
+                <li><a href="recetas.html">recetas
+
+                </a></li>
+                <li><a href="index.html">principal
+
+                </a></li>
+         
+            </ul>
+        </nav>
+    
+        <br>
+        <div class="container">
+            <h1>Chef Thomas Keller</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="bio">
+            <div class="bio-content">
+                <img src="./assets/imagenes/thomas.jpeg" alt="Foto del Chef Thomas Keller">
+                <div class="bio-text">
+                    <h2>Biografía</h2>
+                    <p>Thomas Keller es uno de los chefs más prestigiosos del mundo, conocido por su meticulosa atención al detalle y su pasión por la excelencia culinaria. Nacido en California, Estados Unidos, Keller comenzó su carrera en la cocina desde joven y rápidamente ascendió a la cima del mundo culinario.</p>
+                    <p>Ha trabajado en algunos de los restaurantes más reconocidos a nivel mundial y ha sido galardonado con múltiples estrellas Michelin. Su restaurante insignia, The French Laundry, ubicado en Napa Valley, es considerado uno de los mejores del mundo. Keller también ha abierto otros restaurantes de renombre, como Per Se en Nueva York.</p>
+                    <h3>Logros Destacados</h3>
+                    <ul>
+                        <li>Tres Estrellas Michelin para The French Laundry</li>
+                        <li>Tres Estrellas Michelin para Per Se</li>
+                        <li>Premio James Beard a Mejor Chef en América</li>
+                        <li>Autor de varios libros de cocina aclamados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendations">
+            <h3>Recomendaciones</h3>
+            <div class="recommendation">
+                <img src="./assets/imagenes/thomas.jpeg" alt="Foto de Ferran Adrià">
+                <p><strong>Chef Ferran Adrià:</strong> "Thomas Keller es un verdadero maestro en la cocina. Su precisión y creatividad son inigualables. Siempre es un placer colaborar con él y aprender de su vasta experiencia."</p>
+            </div>
+            <div class="recommendation">
+                <img src="./assets/imagenes/thomas.jpeg" alt="Foto de René Redzepi">
+                <p><strong>Chef René Redzepi:</strong> "Thomas es una inspiración para todos nosotros. Su dedicación a la calidad y la innovación lo colocan entre los mejores chefs del mundo."</p>
+            </div>
+            <div class="recommendation">
+                <img src="./assets/imagenes/thomas.jpeg" alt="Foto de Joan Roca">
+                <p><strong>Chef Joan Roca:</strong> "La cocina de Thomas Keller es sinónimo de perfección. Su restaurante, The French Laundry, es un destino obligatorio para cualquier amante de la gastronomía."</p>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <h3>Galería de Imágenes</h3>
+            <img src="./assets/imagenes/platomuestra1.jpg" alt="Plato de muestra 1" data-recipe="Receta 1: Ingredientes y preparación.">
+            <img src="./assets/imagenes/platomuestra2.jpeg" alt="Plato de muestra 2" data-recipe="Receta 2: Ingredientes y preparación.">
+            <img src="./assets/imagenes/platomuestra3.jpg" alt="Plato de muestra 3" data-recipe="Receta 3: Ingredientes y preparación.">
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Detalles de la Receta</h3>
+                <p id="recipe-details"></p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <h3>Contacto</h3>
+            <p><strong>Restaurante:</strong> The French Laundry</p>
+            <p><strong>Dirección:</strong> 6640 Washington St, Yountville, CA 94599, Estados Unidos</p>
+            <p><strong>Teléfono:</strong> +1 707-944-2380</p>
+            <p><strong>Correo Electrónico:</strong> <a href="mailto:contacto@frenchlaundry.com">contacto@frenchlaundry.com</a></p>
+            <p><strong>Redes Sociales:</strong></p>
+            <ul>
+                <li><a href="https://instagram.com/chefthomaskeller" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com/chefthomaskeller" target="_blank">Twitter</a></li>
+                <li><a href="https://facebook.com/chefthomaskeller" target="_blank">Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Chef Thomas Keller. Todos los derechos reservados.</p>
+    </footer>
+
+    
+</body>
+</html>
